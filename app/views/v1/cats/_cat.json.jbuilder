@@ -4,3 +4,4 @@
  json.color cat.color
  json.age_category cat.age_category
  json.anything 'meow'
+ json.adoptable? cat.adoptable

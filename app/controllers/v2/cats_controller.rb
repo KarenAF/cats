@@ -1,4 +1,4 @@
-class CatsController < ApplicationController
+class V2::CatsController < ApplicationController
   def index
     @cats = Cat.all
     render 'index.json.jbuilder'

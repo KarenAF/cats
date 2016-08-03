@@ -1,10 +1,20 @@
 Rails.application.routes.draw do
 
+namespace :v1 do
   get '/cats' => 'cats#index'
   post '/cats' => 'cats#create'
   get '/cats/:id' => 'cats#show'
   patch '/cats/:id' => 'cats#update'
   delete '/cats/:id' => 'cats#destroy'
+end
+
+namespace :v2 do
+  get '/cats' => 'cats#index'
+  post '/cats' => 'cats#create'
+  get '/cats/:id' => 'cats#show'
+  patch '/cats/:id' => 'cats#update'
+  delete '/cats/:id' => 'cats#destroy'
+end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
