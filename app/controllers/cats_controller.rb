@@ -31,4 +31,10 @@ class CatsController < ApplicationController
     @cat.save      
     redirect_to "/cats/#{@cat.id}"
   end
+
+  def destroy
+    @cat = Cat.find_by(id: params[:id])
+    @cat.destroy
+    render json: {message: "Cat successfully destroyed"}
+  end
 end
