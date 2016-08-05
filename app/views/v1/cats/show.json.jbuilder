@@ -1,1 +1,1 @@
-json.partial! 'cat.json.jbuilder', cat: cat
+json.partial! 'cat.json.jbuilder', cat: @cat
