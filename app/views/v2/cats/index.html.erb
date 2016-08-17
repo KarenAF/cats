@@ -1,0 +1,20 @@
+
+<div ng-app="app">
+  <div ng-controller="catsCtrl" ng-init="setup()">
+
+    <h4>Total number of cats: {{ cats.length }}</h4>
+    <div ng-repeat="cat in cats">
+      <h3>{{ cat.name }}</h3>
+      <p>{{ cat.breed }}</p>
+    </div>
+    <h2>Add a cat</h2>
+    <div>
+      Name: <input ng-model="newCatName">
+      Breed: <input ng-model="newCatBreed">
+      Color: <input ng-model="newCatColor">
+      Age: <input ng-model="newCatAge">
+      <button ng-click="addCat(newCatName, newCatBreed, newCatColor, newCatAge)">Add cat</button>
+    </div>
+
+  </div>
+</div>
