@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 namespace :v1 do
+  get '/' => 'cats#index'
   get '/cats' => 'cats#index'
   post '/cats' => 'cats#create'
   get '/cats/:id' => 'cats#show'
