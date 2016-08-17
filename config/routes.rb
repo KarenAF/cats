@@ -17,6 +17,7 @@ namespace :v2 do
   delete '/cats/:id' => 'cats#destroy'
 end
 
+get '/' => 'cats#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

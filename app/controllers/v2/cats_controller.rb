@@ -1,7 +1,7 @@
 class V2::CatsController < ApplicationController
   def index
     @cats = Cat.all
-    render 'index.html.erb'
+    render 'index.json.jbuilder'
   end
    
   def show 
