@@ -1,10 +1,17 @@
 <div ng-app="app">
-{{ 1 + 1 }}
   <div ng-controller="catsCtrl" ng-init="setup()">
     <h4>Total number of cats: {{ cats.length }}</h4>
-    <div ng-repeat="cat in cats">
-      <h3>{{ cat.name }}</h3>
-      <p>{{ cat.breed }}</p>
+    <div>
+      <button ng-click="setOrderAttribute('name')">Order by name</button>
+      <button ng-click="setOrderAttribute('bio')">Order by bio</button>
+    </div>
+    <input ng-model="nameFilter">
+    <div ng-repeat="cat in cats | filter: {name: nameFilter} | orderBy:orderAttribute:isOrderDescending">
+      <h3>name: {{ cat.name }}</h3>
+      <p>breed:{{ cat.breed }}</p>
+      <p>color: {{ cat.color }}</p>
+      <p>age: {{ cat.age_category }}</p>
+      <br>
     </div>
     <h2>Add a cat</h2>
     <div>

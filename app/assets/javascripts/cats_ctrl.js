@@ -7,6 +7,15 @@
       });
     };
 
+    $scope.setOrderAttribute = function(inputAttribute) {
+      if (inputAttribute !== $scope.orderAttribute) { // clicked on a different button
+        $scope.isOrderDescending = false;
+      } else {
+        $scope.isOrderDescending = !$scope.isOrderDescending;
+      }
+      $scope.orderAttribute = inputAttribute;
+    };
+
     // $scope.cats = [{name: 'fd', breed: 'fdfd'}]    
 
     window.$scope = $scope;
