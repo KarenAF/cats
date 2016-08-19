@@ -9,22 +9,22 @@
 
     $scope.setOrderAttribute = function(inputAttribute) {
       if (inputAttribute !== $scope.orderAttribute) { // clicked on a different button
-        $scope.isOrderDescending = false;
-        $scope.direction = "^";         
+        $scope.isOrderDescending = false;  
       } else {
         $scope.isOrderDescending = !$scope.isOrderDescending;     
       }
       $scope.orderAttribute = inputAttribute;
+
+      if($scope.direction === "^") {
+        $scope.direction = "v"
+      } else {
+        $scope.direction = "^"
+      }                      
+
     };
 
-    // $scope.direction = function(direction) {
-    //   if ($scope.isOrderDescending = false) {
-    //     $scope.direction = "^"
-    //   } else {
-    //     $scope.direction = "v"
-    //   }
-    // };
-    $scope.direction = "v";
+    $scope.direction = "^";
+    $scope.vdirection = "v";
 
     // $scope.cats = [{name: 'fd', breed: 'fdfd'}]    
 
