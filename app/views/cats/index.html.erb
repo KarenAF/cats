@@ -8,6 +8,15 @@
     <input ng-model="nameFilter">
 <br>
 
+<div>
+  <label> filter name: </label>
+  <input ng-model="nameFilter" list="names">
+
+  <datalist id='names'>
+    <option ng-repeat="cat in cats"> {{cat.name}}</option>
+  </datalist>
+</div>
+
 <table style="width:100%">
   <tr>
     <th><button ng-click="setOrderAttribute('name')">Name {{ direction }} </button></th>
