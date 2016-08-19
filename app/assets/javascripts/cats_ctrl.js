@@ -15,16 +15,13 @@
       }
       $scope.orderAttribute = inputAttribute;
 
-      if($scope.direction === "^") {
+      if($scope.isOrderDescending === false) {
         $scope.direction = "v"
       } else {
         $scope.direction = "^"
       }                      
 
     };
-
-    $scope.direction = "^";
-    $scope.vdirection = "v";
 
     // $scope.cats = [{name: 'fd', breed: 'fdfd'}]    
 
