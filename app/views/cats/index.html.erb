@@ -6,6 +6,22 @@
       <button ng-click="setOrderAttribute('bio')">Order by bio</button>
     </div>
     <input ng-model="nameFilter">
+<br>
+
+<table style="width:100%">
+  <tr>
+    <th>Name</th>
+    <th>Breed</th>
+    <th>Color</th>
+    <th>Age Category</th>
+  </tr>
+<tr ng-repeat="cat in cats">
+    <td>{{ cat.name }}</td>
+    <td>{{ cat.breed }}</td>
+    <td>{{ cat.color }}</td>
+    <td>{{ cat.age_category }}</td>
+</tr>
+</table>    
     <div ng-repeat="cat in cats | filter: {name: nameFilter} | orderBy:orderAttribute:isOrderDescending">
       <h3>name: {{ cat.name }}</h3>
       <p>breed:{{ cat.breed }}</p>
