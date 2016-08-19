@@ -16,6 +16,14 @@
       $scope.orderAttribute = inputAttribute;
     };
 
+    $scope.direction = function(direction) {
+      if ($scope.isOrderDescending = false) {
+        $scope.direction = "^"
+      } else {
+        $scope.direction = "v"
+      }
+    };
+
     // $scope.cats = [{name: 'fd', breed: 'fdfd'}]    
 
     window.$scope = $scope;

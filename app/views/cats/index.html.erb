@@ -10,12 +10,12 @@
 
 <table style="width:100%">
   <tr>
-    <th>Name</th>
-    <th>Breed</th>
-    <th>Color</th>
-    <th>Age Category</th>
+    <th><button ng-click="setOrderAttribute('name')">Name {{ direction }} </button></th>
+    <th><button ng-click="setOrderAttribute('breed')">Breed</button></th>
+    <th><button ng-click="setOrderAttribute('color')">Color</button></th>
+    <th><button ng-click="setOrderAttribute('age_category')">Age</button></th>
   </tr>
-<tr ng-repeat="cat in cats">
+<tr ng-repeat="cat in cats | filter: {name: nameFilter} | orderBy:orderAttribute:isOrderDescending">
     <td>{{ cat.name }}</td>
     <td>{{ cat.breed }}</td>
     <td>{{ cat.color }}</td>
