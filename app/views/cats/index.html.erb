@@ -33,7 +33,7 @@
 </table>    
     <div ng-repeat="cat in cats | filter: {name: nameFilter} | orderBy:orderAttribute:isOrderDescending">
       <h3>name: {{ cat.name }}</h3>
-      <p>breed:{{ cat.breed }}</p>
+      <p>breed: {{ cat.breed }}</p>
       <p>color: {{ cat.color }}</p>
       <p>age: {{ cat.age_category }}</p>
       <br>
